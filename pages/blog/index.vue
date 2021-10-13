@@ -1,20 +1,16 @@
 <template>
   <div class="wrapper-content wrapper-content--fixed">
-      <Promo/>
-      <Intro title="My last posts"/>
-      <PostsList :posts="posts" />
-      <Contacts />
+    <Intro title="My posts"/>
+    <PostsList :posts="posts"/>
   </div>
 </template>
 
 <script>
-import Promo from '@/components/Promo'
 import Intro from '@/components/UI/Intro'
 import PostsList from '@/components/blog/PostsList'
-import Contacts from '@/components/Contacts'
 
 export default {
-  components: { Promo, Intro, PostsList, Contacts },
+  components: {Intro, PostsList},
   data() {
     return {
       posts: [
@@ -41,12 +37,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.promo {
-  text-align: center;
-  p {
-    color: #999;
-  }
-}
-</style>
