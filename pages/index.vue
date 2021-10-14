@@ -9,12 +9,10 @@
 
 <script>
 import Promo from '@/components/Promo'
-import Intro from '@/components/UI/Intro'
-import PostsList from '@/components/blog/PostsList'
 import Contacts from '@/components/Contacts'
 
 export default {
-  components: { Promo, Intro, PostsList, Contacts },
+  components: { Promo, Contacts },
   data() {
     return {
       posts: [

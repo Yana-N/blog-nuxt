@@ -21,17 +21,6 @@
   </div>
 </template>
 
-<script>
-import Intro from '@/components/UI/Intro'
-
-export default {
-  name: 'About',
-  components: {
-    Intro
-  }
-}
-</script>
-
 <style lang="scss">
 .about {
   p {

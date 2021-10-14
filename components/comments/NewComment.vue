@@ -1,16 +1,15 @@
 <template>
-  <section class="contact">
+  <section class="new-comment">
     <div class="container">
-      <h2 class="title"> Contact me! </h2>
+      <h2 class="title"> Comment the post! </h2>
 
-      <Message v-if="message" :message="message" />
+      <Message v-if="message" :message="message"/>
 
       <form @submit.prevent="onSubmit" class="contact-form">
-        <AppInput v-model="user.name" >Name:</AppInput>
-        <AppInput v-model="user.email" type="email">Email:</AppInput>
-        <AppTextarea v-model="user.text">Text:</AppTextarea>
+        <AppInput v-model="comment.name">Name:</AppInput>
+        <AppTextarea v-model="comment.text">Text:</AppTextarea>
         <div class="controls">
-          <AppButton class="btnWhite">Submit</AppButton>
+          <AppButton>Submit</AppButton>
         </div>
       </form>
     </div>
@@ -22,9 +21,8 @@ export default {
   data() {
     return {
       message: null,
-      user: {
+      comment: {
         name: '',
-        email: '',
         text: '',
       }
     }
@@ -32,30 +30,26 @@ export default {
   methods: {
     onSubmit() {
       this.message = "Submitted!"
-      this.user.name = ''
-      this.user.email = ''
-      this.user.text = ''
+      this.comment.name = ''
+      this.comment.text = ''
 
-      console.log(this.user)
+      console.log(this.comment)
     }
   }
 }
 </script>
 
 <style lang="scss">
-.contact {
+.new-comment {
   text-align: center;
-  background-color: #4400ff;
-  color: #fff;
-  .title {
-    color: #fff;
-  }
   &-form {
     margin: 0 auto;
     max-width: 600px;
+
     label {
       text-align: left;
     }
+
     input, textarea {
       margin-bottom: 15px;
     }
