@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import newPostForm from '@/components/admin/newPostForm'
+import newPostForm from '@/components/admin/NewPostForm'
 
 export default {
   layout: 'admin',
